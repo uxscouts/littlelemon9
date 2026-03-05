@@ -5,8 +5,8 @@ function AboutUsMod() {
         <section id="About-Us-Section">
           <div className="about-grid-container">
             <article className="About-Us-Module">
-              <h1 className="karla-800">Little Lemon</h1>
-              <h3>Chicago</h3>
+              <h1 className="dullDarkGreen Markazi-Bold extraBig">Little Lemon</h1>
+              <h3 className="salmon MarkaziText-Bold prettyBig moveyUppy">Chicago</h3>
               <p>Little Lemon Chicago is a family owned Mediterranean 
                 restaurant located in the heart of the city. The restaurant 
                 is run by brothers Mario and Adrian, who have always had a 
