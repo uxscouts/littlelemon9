@@ -4,22 +4,23 @@ import HomeIntro from './HomeIntro';
 import Specials from './Specials';
 import Reviews from './Reviews';
 import AboutUsMod from './AboutUsMod';
-import TestRoutes from './TestRoutes';
 import Footer from './Footer';
 
 
 const Layout = ({ children }) => (
   <>
+  <p>Layout</p>
+  {/*}
     <Header>
       <HeaderNav />
     </Header>
-    <TestRoutes />
     <HomeIntro />
     <Specials/>
     <Reviews/>
     <AboutUsMod/>
     <main className='LittleLemon_Container'>{children}</main>
     <Footer/>
+    */}
   </>
 );
 
