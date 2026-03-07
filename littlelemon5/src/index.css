@@ -12,13 +12,6 @@ body {
   background-color: #f2f2f2;
 }
 
-/*
-@font-face {
-  font-family: 'MarkaziText-Bold';
-  src: url("./assets/fonts/MarkaziText-Bold.ttf") format('ttf"');
-  font-display: swap; 
-}
-*/
 .extraBig {
   font-size: 360%;
 }
