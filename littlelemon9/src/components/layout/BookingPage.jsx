@@ -1,9 +1,9 @@
 
 import BookingForm from "./BookingForm";
 
-const BookingPage = () => {
+const BookingPage = ({updateTestField01}) => {
     return(
-        <BookingForm/>
+        <BookingForm onFieldChange={updateTestField01}/>
     )
 }
 

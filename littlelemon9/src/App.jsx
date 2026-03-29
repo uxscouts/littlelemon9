@@ -20,22 +20,22 @@ import LemonLogo from './assets/images/LemonLogo.png';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+function App() {
 
 const Home = () => <Homepage/>;
 const About = () => <AboutUsMod/>;
 //const ReservationMod = () => <Reservation/>;
-const BookingPageMod = () => <BookingPage/>;
+const BookingPageMod = () => <BookingPage onFieldChange={updateTestField01}/>;
 const HomeOrderMod = () => <HomeOrder/>;
 const Login = () => <h2>Login</h2>;
 
-/*
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
-*/
 
+// this useState setter is for the testField01
+const [testField01, setTestField01] = useState('Test Field Value');
+const updateTestField01 = (newTestField01) => {
+    setTestField01(newTestField01);
+}
 
-function App() {
   return (
     <>
       <Router>
@@ -61,6 +61,11 @@ function App() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+
+    <div className="container">
+      <p>Test Field 01: {testField01} </p>
+    </div>
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

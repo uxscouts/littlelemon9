@@ -4,7 +4,7 @@ import AvailableTimes from "./AvailableTimes";
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 
-const BookingForm = () => {
+const BookingForm = ({updateTestField01}) => {
 
  const [ocassionState, setOccassionState] = useState("Friends");
  const [resDate, setResDate]=useState("");
@@ -19,6 +19,17 @@ const BookingForm = () => {
                 <p><strong>Booking Date:</strong>&nbsp;  {resDate}</p>
             </div>
         <Form className="BookingForm">
+            <FormGroup>
+                <Label htmlFor="testField01">Test Field</Label>
+                {/*
+                <Input 
+                    type="text"
+                    id="testField01"
+                />*/}
+            <button onClick={() => updateTestField01("TestField01 from BookingForm!")}>
+                TestField01
+            </button>
+            </FormGroup>
             <FormGroup>
                 <Label htmlFor="res-date">Choose date</Label>
                 <Input 
