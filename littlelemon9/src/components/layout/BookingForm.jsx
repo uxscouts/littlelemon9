@@ -4,16 +4,18 @@ import AvailableTimes from "./AvailableTimes";
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 
-const BookingForm = ({updateTestField01}) => {
+function BookingForm({testField01, updateTestField01}){
 
  const [ocassionState, setOccassionState] = useState("Friends");
  const [resDate, setResDate]=useState("");
   const [guestsCount, setGuestsCount] = useState("2");
-
+  
+const onChange = (e) => updateTestField01(e.target.value);
 
     return (
         <div className="BookingFormContainer">
             <div>
+                <p><strong>Test Field:</strong>&nbsp; {testField01}</p>
                 <p><strong>Occassion:</strong>&nbsp; {ocassionState}</p>
                 <p><strong>Guest Count:</strong>&nbsp;  {guestsCount}</p>
                 <p><strong>Booking Date:</strong>&nbsp;  {resDate}</p>
@@ -24,6 +26,8 @@ const BookingForm = ({updateTestField01}) => {
                 <Input 
                     type="text"
                     id="testField01"
+                    value={testField01}
+                    onChange={onChange}
                 />
                 {/*
             <button onClick={() => updateTestField01("TestField01 from BookingForm!")}>
@@ -36,25 +40,14 @@ const BookingForm = ({updateTestField01}) => {
                 <Input 
                 type="date" 
                 id="res-date"
-                 onChange={e =>setResDate(e.target.value)}  
+                 onChange={e => setResDate(e.target.value)} 
+                    value={resDate}
                 />
             </FormGroup>
-{/*
+
             <FormGroup>
                 <Label htmlFor="res-time">Choose time</Label>
-                <Input type="select" id="res-time">
-                    <option>17:00</option>
-                    <option>18:00</option>
-                    <option>19:00</option>
-                    <option>20:00</option>
-                    <option>21:00</option>
-                    <option>22:00</option>
-                </Input>
-            </FormGroup>
-*/}
-            <FormGroup>
-                <Label htmlFor="res-time">Choose time</Label>
-                <AvailableTimes/>
+                <AvailableTimes />
             </FormGroup>
             <FormGroup>
                 <Label htmlFor="guests">Number of guests</Label>

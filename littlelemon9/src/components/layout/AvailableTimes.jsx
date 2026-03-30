@@ -37,7 +37,7 @@ function AvailableTimes(){
     return(
         <div>
             <p>{selectedValue}</p>
-            <form onSubmit={handleSubmit}>
+            {/*<form onSubmit={handleSubmit}>*/}
                 <Input type="select" id="res-time" value={selectedValue} onChange={handleChange}>
                 {options.map((option) => (
                     <option
@@ -51,7 +51,7 @@ function AvailableTimes(){
                 </Input>
             <br/>
            {/* <button type="submit">Submit</button> */}
-        </form>
+       {/* </form> */}
         </div>
     )
 }

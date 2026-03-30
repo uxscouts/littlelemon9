@@ -1,9 +1,10 @@
+import {useState} from 'react';
 
 import BookingForm from "./BookingForm";
 
-const BookingPage = ({updateTestField01}) => {
+function BookingPage({testField01, onFieldChange}){
     return(
-        <BookingForm onFieldChange={updateTestField01}/>
+        <BookingForm testField01={testField01} updateTestField01={onFieldChange}/>
     )
 }
 

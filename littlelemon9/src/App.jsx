@@ -22,19 +22,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
+// this useState setter is for the testField01
+const [testField01, setTestField01] = useState('Test Field Value');
+const updateTestField01 = (somevalue) => {
+    setTestField01(somevalue);
+}
+
 const Home = () => <Homepage/>;
 const About = () => <AboutUsMod/>;
 //const ReservationMod = () => <Reservation/>;
-const BookingPageMod = () => <BookingPage onFieldChange={updateTestField01}/>;
+const BookingPageMod = () => <BookingPage testField01={testField01} onFieldChange={updateTestField01}/>;
 const HomeOrderMod = () => <HomeOrder/>;
 const Login = () => <h2>Login</h2>;
 
 
-// this useState setter is for the testField01
-const [testField01, setTestField01] = useState('Test Field Value');
-const updateTestField01 = (newTestField01) => {
-    setTestField01(newTestField01);
-}
 
   return (
     <>
